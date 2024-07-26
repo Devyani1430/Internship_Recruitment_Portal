@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>internship portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="html" href="login.html">
+    <link rel="html" href="register.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+
+<style>
+    .sidenav{
+      height: 100%;
+      width:0;
+      position:fixed;
+      z-index: 1;
+      top:0;
+      right:0;
+      background-color: #111;
+      overflow-x:hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    .sidenav a{
+      padding: 1rem;
+      text-decoration: none;
+      font-size: 1.6rem;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    .sidenav .cont1{
+      
+      color: #000000;
+      font-size: 1rem;
+    }
+    .sidenav .dropbtn1{
+     
+      padding: 2rem;
+      font-size: 1.2rem;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      background-color: #111;
+      border: none;
+      
+      
+    }
+     .dropdown-content a:hover {background-color: #ddd;}
+
+
+     .dropdown:hover .dropdown-content {display: block;}
+
+
+     /*.dropdown:hover .dropbtn1 {background-color: #4b4b4c;}*/
+   
+    .sidenav a:hover{
+      color: #f1f1f1;
+    }
+    .sidenav .closebtn{
+      position: absolute;
+      top:0;
+      right:1rem;
+      font-size: 2.5rem;
+      margin-left: 50px;
+    }
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+</style>
+
+<body>
+ 
+   <!-- Nav Bar -->
+
+   <section class="navbar"> 
+       
+        
+
+
+
+         <div class="dcdium"  style="margin: 1rem;">
+            <div class="nav-logo" style="margin: 1rem;padding-left: 1rem;">
+               <img src="dc_logo.png" id="image1" style="margin-left: 1rem;padding-left: 1rem;">
+               <p style="margin-left: 0.5rem;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 1rem;">DCDIUM Technologies</p>
+            </div>
+           
+         </div>
+
+         <div class="info">
+            
+            <div class="dropdown">
+               <button class="dropbtn">Internships<i class="fa-solid fa-caret-down" id="icon"></i>
+                  <div class="dropdown-content">
+                     <option class="cont">Internship in Banglore</option>
+                     <option class="cont">Internship in Pune</option>
+                     <option class="cont">Internship in Mumabai</option>
+                     <option class="cont">Internship in Delhi</option>
+                  </div>
+               </button>
+            </div>
+             
+            <div class="dropdown">
+               <button class="dropbtn">Courses<i class="fa-solid fa-caret-down" id="icon"></i>
+                  <div class="dropdown-content">
+                     <option class="cont">Data Science</option>
+                     <option class="cont">Machine Learning</option>
+                     <option class="cont">Digital Marketing</option>
+                     <option class="cont">Web Devlopment</option>
+                  </div>
+               </button> 
+            </div>
+
+         </div>
+
+         <div class="ser-log-reg">
+
+           <div class="search" >
+               <button id="search" onclick="toggleSearchSection()">              
+                 <i class="fa-solid fa-magnifying-glass"></i>
+                 <p>Search</p>
+               </button>    
+            </div>
+            
+            <div class="login-but">
+               <button class="login"style="border: 2px solid #00a5ec;background-color: white;"><a href="login.html" style="  width: 6rem;
+                  height: 40px;
+                  color: #00a5ce;
+                  border-radius:10px;
+                  margin-right: 1rem;
+                  margin-left: 1rem;
+                  margin-top: 1.2rem;
+                  font-size: 1rem;text-decoration: none;"><b>Login</b></a></button>
+            </div>
+
+            <div class="reg-but">
+              <button style="background-color: #00a5ec;border: none;color: white;"><a href="register.html" style="text-decoration: none;color: white;"><b>Register</b></a></button>
+            </div>
+         </div>
+         <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="dropdown">
+               <button class="dropbtn1" style="top: 3rem;">Internships
+                   <div class="dropdown-content">
+                      <option class="cont1">Internship in Banglore</option>
+                      <option class="cont1">Internship in Pune</option>
+                      <option class="cont1">Internship in Mumabai</option>
+                      <option class="cont1">Internship in Delhi</option>
+                    </div>
+                 </button>
+             </div>
+           
+             <div class="dropdown">
+                <button class="dropbtn1">Courses
+                      <div class="dropdown-content">
+                          <option class="cont1">Data Science</option>
+                          <option class="cont1">Machine Learning</option>
+                          <option class="cont1">Digital Marketing</option>
+                          <option class="cont1">Web Devlopment</option>
+                      </div>
+                </button> 
+             </div>
+             <button style="margin: 2rem; display: flex;
+             justify-content: center;
+             align-items: center;"><a href="login.html" style="  width: 6rem;
+                height: 40px;
+                color: #00a5ce;
+                border-radius:10px;
+                margin-right: 1rem;
+                margin-left: 1rem;
+                margin-top: 1.2rem;
+                font-size: 1rem;">Login</a></button>
+         </div>
+          <div class="menu" style="margin: 1rem;">
+             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>      
+          </div>
+ 
+          <script>
+             function openNav() {
+               document.getElementById("mySidenav").style.width = "250px";
+             }
+             
+             function closeNav() {
+               document.getElementById("mySidenav").style.width = "0";
+             }
+             </script>
+        
+        
+   </section>  
+
+   <div class="search2" >
+      <input placeholder="Search Here" class="ser" style="margin: 0.5rem;">  
+   </div>
+     
+   <!--Body Content-->
+    
+   <div class="header">
+      <h1>Make Your Dream Career a Reality</h1>
+      <hr>
+   </div>
+   <div class="random">
+   <hr style="width: 60%; ">
+   </div>
+   <div class="trending-section">
+      <div class="title"><h5>Trending On DCDIUM</h5><img src="fire.png" id="one"></div>
+   </div>
+   
+   <!-- Crousal -->
+
+   <div class="scroll-container">
+                    
+      <div class="scroll">
+         <div class="card trending_banners" id="trending_banner_pgc_banner">
+            <a target="_blank" href="#">
+               <img src="https://internshala.com/static/images/pgc_course_specific_banners/pgc_homepage_banner_new.png" alt="card" />
+            </a>
+         </div>
+         <div class="card trending_banners" id="trending_banner_695" >
+            <a target="_blank" href="#">
+               <img src="https://internshala-uploads.internshala.com/banner-images/home_new/placement_jan24_launch-student.png.webp" alt="card" />
+            </a>
+         </div>
+         <div class="card trending_banners" id="trending_banner_697" >
+            <a target="_blank" href="#">
+               <img src="https://internshala-uploads.internshala.com/banner-images/home_new/internshala_study_abroad-student.png.webp" alt="card" />
+            </a>
+         </div>
+         <div class="card trending_banners" id="trending_banner_694" >
+            <a target="_blank" href="#">
+               <img src="https://internshala-uploads.internshala.com/banner-images/home_new/aditya_birla_capital-student.png.webp" alt="card" />
+            </a>
+         </div>
+         <div class="card trending_banners" id="trending_banner_629" >
+            <a target="_blank" href="#">
+               <img src="https://internshala-uploads.internshala.com/banner-images/home_new/is_jobs-student.png.webp" alt="card" />
+            </a>
+         </div>
+         <div class="card trending_banners" id="trending_banner_660" >
+            <a target="_blank" href="#">
+              <img src="https://internshala-uploads.internshala.com/banner-images/home_new/isp_39-student.png.webp" alt="card" />
+            </a>
+         </div>
+         <div class="card trending_banners" id="trending_banner_616" >
+            <a target="_blank" href="#">
+               <img src="https://internshala-uploads.internshala.com/banner-images/home_new/int_opps-student.png.webp" alt="card" />
+            </a>
+         </div>             
+      </div>
+      <div class="scroll-controller">                                 
+         <i class="glyphicon glyphicon-chevron-left" onclick="scroll(-1)"></i>
+         <div class="track">
+             <div class="thumb"></div>
+         </div>
+         <i class="glyphicon glyphicon-chevron-right" onclick="scroll(1)" id=""></i>
+      </div>
+   </div>
+
+<!--
+    <script>
+       // JavaScript for manual scrolling
+       let scrollContainer = document.querySelector('.scroll-container');
+        let scroll = document.querySelector('.scroll');
+
+       let scrollPosition = 0;
+        const cardWidth = 320; // Adjust the card width and margin as needed
+
+        // Function to scroll left
+       function scrollLeft() {
+        const containerWidth = scrollContainer.clientWidth;
+        const totalWidth = scroll.scrollWidth;
+
+
+         if (scrollPosition > 0) {
+            scrollPosition -= Math.min(cardWidth, scrollPosition);
+            scroll.style.transform = `translateX(-${scrollPosition}px)`;
+         }
+         console.log("New Scroll Position (left):", scrollPosition);
+         console.log("Total Width:", totalWidth);
+         console.log("Container Width:", containerWidth);
+         console.log("Transform Value:", `translateX(-${scrollPosition}px)`);
+         }
+
+         // Function to scroll right
+         function scrollRight() {
+             const containerWidth = scrollContainer.clientWidth;
+             const totalWidth = scroll.scrollWidth;
+
+            scrollPosition += cardWidth;
+           if (scrollPosition + containerWidth > totalWidth) {
+           scrollPosition = totalWidth - containerWidth;
+        }
+        scroll.style.transform = `translateX(-${scrollPosition}px)`;
+      }
+   </script>
+-->
+
+   <!-- Hiring Cards -->
+  <div class="responsive">
+   <div class="intern-heading"><h5 style="text-align: center; font-size: 2rem; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;margin-top: 2.5rem;margin-bottom: 2.5rem;">Latest internships on DCDIUM</h5></div>
+      <div class="hire-intern">
+         <div class="xyz">
+            <div class="hire_cards">
+               <div class="card-heading">
+               <h6>Digital Marketing</h6>
+               <p class="company">DCDIUM Tech.</p>
+            </div>
+            <hr>
+            <div class="card-content">
+               <ul>
+                  <li style="margin-bottom:0.2rem;"> 
+                     <i class="fa-solid fa-location-dot" style="margin-right: 16px;" ></i>
+                     <p>Pune</p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-money-bill" style="margin-right: 9px;"></i> 
+                    <p>15,000/-</p>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-calendar-days" style="margin-right: 16px;"></i>
+                    <p>3 Months</p>
+                  </li>
+               </ul>
+            </div>
+            <div class="card-footer">
+               <p>Intership</p>
+               <a href="#">View Details </a>
+            </div>
+         </div>
+
+         <div class="hire_cards">
+            <div class="card-heading">
+               <h6>Machine Learning</h6>
+               <p class="company">DCDIUM Tech.</p>
+            </div>
+            <hr>
+            <div class="card-content">
+              <ul>
+                 <li style="margin-bottom:0.2rem;"> 
+                    <i class="fa-solid fa-location-dot" style="margin-right: 16px;" ></i>
+                    <p>Pune</p>
+                 </li>
+                 <li>
+                    <i class="fa-solid fa-money-bill" style="margin-right: 9px;"></i> 
+                    <p>18,000/-</p>
+                  </li>
+                  <li>
+                     <i class="fa-solid fa-calendar-days" style="margin-right: 16px;"></i>
+                    <p>5 Months</p>
+                  </li>
+              </ul>
+           </div>
+           <div class="card-footer">
+               <p>Intership</p>
+               <a href="#">View Details </a>
+            </div>
+         </div>
+
+         <div class="hire_cards">
+            <div class="card-heading">
+            <h6>Web Development</h6>
+            <p class="company">DCDIUM Tech.</p>
+        </div>
+        <hr>
+        <div class="card-content">
+            <ul>
+               <li style="margin-bottom:0.2rem;"> 
+                  <i class="fa-solid fa-location-dot" style="margin-right: 16px;" ></i>
+                  <p>Pune</p>
+               </li>
+               <li>
+                  <i class="fa-solid fa-money-bill" style="margin-right: 9px;"></i> 
+                  <p>20,000/-</p>
+               </li>
+               <li>
+                  <i class="fa-solid fa-calendar-days" style="margin-right: 16px;"></i>
+                  <p>6 Months</p>
+               </li>
+            </ul>
+         </div>
+        <div class="card-footer">
+            <p>Intership</p>
+            <a href="#">View Details </a>
+         </div>
+      </div>
+      <div class="hire_cards">
+         <div class="card-heading">
+            <h6>Data Science</h6>
+            <p class="company">DCDIUM Tech.</p>
+         </div>
+         <hr>
+         <div class="card-content">
+            <ul>
+               <li style="margin-bottom:0.2rem;"> 
+                  <i class="fa-solid fa-location-dot" style="margin-right: 16px;" ></i>
+                  <p>Pune</p>
+               </li>
+               <li>
+                  <i class="fa-solid fa-money-bill" style="margin-right: 9px;"></i> 
+                  <p>25,000/-</p>
+               </li>
+               <li>
+                  <i class="fa-solid fa-calendar-days" style="margin-right: 16px;"></i>
+                  <p>2.5 Months</p>
+               </li>
+            </ul>
+         </div>
+         <div class="card-footer">
+            <p>Intership</p>
+            <a href="#">View Details </a>
+         </div>
+      </div>
+   
+   </div>
+   
+</div>
+
+<!-- Certications Cards -->
+
+<div class="certification-training-section" style="background-color: #e0efff;">
+   <h5 style="text-align: center; color:#333;margin-top: 3vh;">Certification Courses</h5>
+   <h6 style="text-align: center; color:#333;margin-top: 3vh;font-weight:200px;">Fastest Way to Build Your CV</h6>
+
+   <div class="certificatesdiv">
+   <div class="abc">
+      <div class="certificate">
+         <div class="image3"></div>
+         <div class="cer-content">
+            <p style="font-size: large; text-align:start; color:#8a8a8a; margin-bottom:0.2rem">6 weeks</p>
+            <h6 style="font-size: larger; text-align:left; margin-bottom:0.3rem; margin-left:0.5rem;"> Programming With Python</h6>
+            <div class="extra-info">
+               <i class="fa-solid fa-star" style="margin-right: 0.5rem;color: rgb(253, 228, 64);"></i>
+               <p class="mnp">4.1</p>
+               <p  class="mnp" style="text-align: left;">|</p>
+               <p  class="mnp">91,313</p>
+            </div>
+            <a href="#" style="margin-left: 0.5rem; text-decoration:none;"><b>Know more</b></a>
+         </div>
+      </div>
+
+      <div class="certificate">
+         <div class="image3" ></div>
+         <div class="cer-content">
+            <p style="font-size: large; text-align:start; color:#8a8a8a; margin-bottom:0.2rem">6 weeks</p>
+            <h6 style="font-size: larger; text-align:left; margin-bottom:0.3rem; margin-left:0.5rem;"> Programming With Python</h6>
+            <div class="extra-info">
+               <i class="fa-solid fa-star" style="margin-right: 0.5rem;color: rgb(253, 228, 64);"></i>
+               <p class="mnp">4.1</p>
+               <p  class="mnp" style="text-align: left;">|</p>
+               <p  class="mnp">91,313</p>
+            </div>
+            <a href="#" style="margin-left: 0.5rem; text-decoration:none;"><b>Know more</b></a>
+         </div>
+      </div>
+
+      <div class="certificate">
+         <div class="image3" ></div>
+         <div class="cer-content">
+            <p style="font-size: large; text-align:start; color:#8a8a8a; margin-bottom:0.2rem">6 weeks</p>
+            <h6 style="font-size: larger; text-align:left; margin-bottom:0.3rem; margin-left:0.5rem;"> Programming With Python</h6>
+            <div class="extra-info">
+               <i class="fa-solid fa-star" style="margin-right: 0.5rem;color: rgb(253, 228, 64);"></i>
+               <p  class="mnp">4.1</p>
+               <p  class="mnp" style="text-align: left;">|</p>
+               <p  class="mnp">91,313</p>
+            </div>
+            <a href="#" style="margin-left: 0.5rem; text-decoration:none;"><b>Know more</b></a>
+         </div>
+      </div>
+
+
+      <div class="certificate">
+         <div class="image3" ></div>
+         <div class="cer-content">
+            <p  style="font-size: large; text-align:start; color:#8a8a8a; margin-bottom:0.2rem">6 weeks</p>
+            <h6 style="font-size: larger; text-align:left; margin-bottom:0.3rem; margin-left:0.5rem;"> Programming With Python</h6>
+            <div class="extra-info">
+               <i class="fa-solid fa-star" style="margin-right: 0.5rem;color: rgb(253, 228, 64);"></i>
+               <p  class="mnp">4.1</p>
+               <p   class="mnp" style="text-align: left;">|</p>
+               <p  class="mnp">91,313</p>
+            </div>
+            <a href="#" style="margin-left: 0.5rem; text-decoration:none;"><b>Know more</b></a>
+         </div>
+      </div> 
+   </div>    
+</div>   
+</div>
+</div>
+<footer class="foot">
+   <div class="footcontainer" >
+      <div class="footlist">
+         <h6 style="font-size: 1.2rem; margin-top:0.5rem; color:#ffffff;">Internships By Places</h6>
+         <hr style="width: 50%; border:1px solid #8a8a8a; margin-top:0.8rem;">
+         <ul style="display: flex; flex-direction:column; justify-content:space-evenly; align-items:flex-start;">
+            <a href="#" class="footele">Internship in Banglore</a>
+            <a href="#" class="footele">Internship in Pune</a>
+            <a href="#" class="footele">Internship in Mumbai</a>
+            <a href="#" class="footele">Internship in Delhi</a>
+         </ul>
+      </div>
+      <div class="footlist">
+         <h6 style="font-size: 1.2rem; margin-top:0.5rem; color:#ffffff;">Internships</h6>
+         <hr style="width: 50%; border:1px solid #8a8a8a; margin-top:0.8rem;">
+         <ul style="display: flex; flex-direction:column; justify-content:space-evenly; align-items:flex-start;">
+            <a href="#" class="footele">Digital Marketing</a>
+            <a href="#" class="footele">Web Development</a>
+            <a href="#" class="footele">Machine Learning</a>
+            <a href="#" class="footele">Data Science</a>
+         </ul>
+      </div>
+      <div class="footlist">
+         <h6 style="font-size: 1.2rem; margin-top:0.5rem; color:#ffffff;">Certifications</h6>
+         <hr style="width: 50%; border:1px solid #8a8a8a; margin-top:0.8rem;">
+         <ul style="display: flex; flex-direction:column; justify-content:space-evenly; align-items:flex-start;">
+            <a href="#" class="footele">Digital Marketing</a>
+            <a href="#" class="footele">Web Development</a>
+            <a href="#" class="footele">Machine Learning</a>
+            <a href="#" class="footele">Data Science</a>
+         </ul>
+      </div>
+      <div class="footlist">
+         <h6 style="font-size: 1.2rem; margin-top:0.5rem; color:#ffffff;">About Us</h6>
+         <hr style="width: 50%; border:1px solid #8a8a8a; margin-top:0.8rem;">
+         <ul style="display: flex; flex-direction:column; justify-content:space-evenly; align-items:flex-start;">
+            <a href="#" class="footele">Terms & Conditions</a>
+            <a href="#" class="footele">Contact Us</a>
+            <a href="#" class="footele">Privacy</a>
+            <a href="#" class="footele">Our Services</a>
+         </ul>
+      </div>
+   </div>
+   <hr style="width: 80%;">
+   <div class="footbottom">
+      <div class="social-media">
+         <i class="fa-brands fa-instagram" style="margin:1rem;"></i>
+         <i class="fa-brands fa-linkedin-in" style="margin:1rem;"></i>
+         <i class="fa-brands fa-twitter" style="margin:1rem;"></i>
+         <i class="fa-brands fa-youtube" style="margin:1rem;"></i>
+      </div>
+      <div class="copyright">
+         <i class="fa-regular fa-copyright" style="margin-left:0.6rem ;"></i>
+         Copyright 2024 DCDIUM
+      </div>
+   </div>
+</footer>
+</body>
+</html>
+
+
