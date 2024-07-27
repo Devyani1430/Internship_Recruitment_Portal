@@ -10,6 +10,11 @@ This web application is a recruitment portal designed to streamline the hiring p
 * **Application Management:** Efficiently track and manage job applications for recruiters.
 * **Candidate Profiles:** Customizable profiles for job seekers to showcase their skills and experience.
 
+## Screenshot
+
+![landing_page](screenshot.png)
+
+
 ## Technologies Used
 * **HTML:** Structure the web pages.
 * **CSS:** Style the user interface.
@@ -25,9 +30,6 @@ To run this project locally:
 * **Job Seekers:** Create an account, search for jobs, apply for desired positions, and manage job applications.
 * **Recruiters:** Create an account, post job openings, review applications, and manage the hiring process.
 
-## Screenshot
-
-![landing_page](screenshot.png)
 
 ## Challenges and Solutions
 * **Challenge:** Implementing a robust search algorithm for job listings.
