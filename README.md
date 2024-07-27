@@ -25,6 +25,10 @@ To run this project locally:
 * **Job Seekers:** Create an account, search for jobs, apply for desired positions, and manage job applications.
 * **Recruiters:** Create an account, post job openings, review applications, and manage the hiring process.
 
+## Screenshot
+
+![landing_page](screenshot.png)
+
 ## Challenges and Solutions
 * **Challenge:** Implementing a robust search algorithm for job listings.
 * **Solution:** Used a combination of JavaScript and regular expressions to create efficient search functionality.
